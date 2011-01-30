@@ -57,7 +57,7 @@ module Spoon
 
   def self._with_file_actions(options)
     # Initialize
-    actions_ptr = FFI::MemoryPointer.new(:pointer, 1) # FIXME
+    actions_ptr = FFI::MemoryPointer.new(:pointer)
     _posix_spawn_file_actions_init(actions_ptr)
 
     # Connect the IO redirection
